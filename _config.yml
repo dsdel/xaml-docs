@@ -131,6 +131,10 @@ navigation:
         position: 5
     controls/radnotifyicon:
         title: RadNotifyIcon
+    controls/radautosuggestbox:
+        title: RadAutoSuggestBox
+    controls/radautosuggestbox/appearance:
+        title: Appearance
     controls/radnumericupdown:
         title: RadNumericUpDown
     controls/radradialmenu:
