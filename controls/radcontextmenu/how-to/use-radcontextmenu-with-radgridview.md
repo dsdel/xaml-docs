@@ -382,20 +382,20 @@ Next you will need two properties that will return the clicked row and the click
 	End Property
 {{endregion}}
 
-The last thing to do is to attach an event handler to the __Opened__ event of the __RadContextMenu__. There you can implement the logic around changing the __ItemsSource__ of the __RadContextMenu__ depending on the clicked element.
+The last thing to do is to attach an event handler to the __Opening__ event of the __RadContextMenu__. There you can implement the logic around changing the __ItemsSource__ of the __RadContextMenu__ depending on the clicked element.
 
-#### __[XAML] Example 8: Attach the Opened event handler__
+#### __[XAML] Example 8: Attach the Opening event handler__
 
 {{region xaml-radcontextmenu-how-to-use-radcontextmenu-with-radgridview_13}}
 	<telerik:RadContextMenu x:Name="GridContextMenu2"
 	                        ItemContainerStyle="{StaticResource MenuItemContainerStyle}"
-	                        Opened="GridContextMenu_Opened" />
+	                        Opening="GridContextMenu_Opening" />
 {{endregion}}
 
-#### __[C#] Example 9: The Opened event handler definition__
+#### __[C#] Example 9: The Opening event handler definition__
 
 {{region cs-radcontextmenu-how-to-use-radcontextmenu-with-radgridview_14}}
-	private void GridContextMenu_Opened(object sender, RoutedEventArgs e)
+	private void GridContextMenu_Opening(object sender, RoutedEventArgs e)
 	{
 	    if (this.ClickedHeader != null)
 	    {
@@ -424,10 +424,10 @@ The last thing to do is to attach an event handler to the __Opened__ event of th
 	}
 {{endregion}}
 
-#### __[VB.NET] Example 9: The Opened event handler definition__
+#### __[VB.NET] Example 9: The Opening event handler definition__
 
 {{region vb-radcontextmenu-how-to-use-radcontextmenu-with-radgridview_15}}
-	Private Sub GridContextMenu_Opened(sender As Object, e As RoutedEventArgs)
+	Private Sub GridContextMenu_Opening(sender As Object, e As RoutedEventArgs)
 	    If Me.ClickedHeader IsNot Nothing Then
 	        Me.GridContextMenu.ItemsSource = Me.headerContextMenuItems
 	    ElseIf Me.ClickedRow IsNot Nothing Then
@@ -462,7 +462,7 @@ The last thing to do in this tutorial is to [handle the menu items' actions]({%s
 {{region xaml-radcontextmenu-how-to-use-radcontextmenu-with-radgridview_16}}
 	<telerik:RadContextMenu x:Name="GridContextMenu3"
 	                        ItemContainerStyle="{StaticResource MenuItemContainerStyle}"
-	                        Opened="GridContextMenu_Opened"
+	                        Opening="GridContextMenu_Opening"
 	                        ItemClick="GridContextMenu_ItemClick" />
 {{endregion}}
 
